@@ -54,7 +54,7 @@ html{
 #main-wrapper{
     display: flex;
     flex-direction:column;
-    max-width:900px;
+    max-width:800px;
     margin: 0 auto;
 }
 body{
@@ -98,6 +98,27 @@ body{
     align-self: flex-start;
     margin: 30px 0;
 }
+
+@media only screen and (min-width: 600px) {
+    .q-box:nth-child(n){
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+    
+}
+    }
+}
+
+@media only screen and (min-width: 200px) {
+    body{
+
+        background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 700px, #232F3E 700px, #232F3E 1400px);
+}
+    
+}
+    }
+}
+
 
 .q-wrapper {
     text-align:left;
@@ -178,26 +199,32 @@ body{
     flex-direction: column;
     justify-content: center;
     width:80%;
-    margin: auto;
+    margin: 20px auto;
+    border: 1px solid white;
+        -webkit-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
+    box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
+    overflow:hidden;
+    border-radius: 20px;
 }
 
 .c-wrapper{
+    background-color:white;
+    padding: 20px;
     
 }
 
 
 .list {
-        box-sizing: border-box;
+    box-sizing: border-box;
   display: flex;
     align-self:center;
   flex-direction: column;
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 500px;
   background-color: #fff;
-  border-radius: 6px;
-  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.2);
+/*  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.2);*/
   list-style: none;
   overflow: hidden;
 }
@@ -208,17 +235,15 @@ body{
 .list .list-item {
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #ecf0f1;
+  border-top: 1px solid #ecf0f1;
   position: relative;
 }
-.list .list-item:last-child {
-  border: 0;
-}
+
 .hidden-box {
   display:none;
 }
 .check--label {
-  font-size: 20px;
+  font-size: .9rem;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -233,23 +258,25 @@ body{
   height: 20px;
   width: 20px;
   margin: 0 20px;
-  border: 2px solid #3498db;
+  border: 2px solid #FF9900;
   border-radius: 2px;
   cursor: pointer;
 }
 .check--label-text {
+/*    Added width */
+    width:90%;
   display: flex;
   align-self: center;
   position: relative;
   cursor: pointer;
-  padding: 20px;
+  padding: 15px;
   border-left: 1px solid #ecf0f1;
 }
 .hidden-box:checked + .check--label {
   background-color: #F9F9F9;
 }
 .hidden-box:checked + .check--label .check--label-box {
-  background-color: #3498db;
+  background-color: #FF9900;
 }
 .hidden-box:checked + .check--label .check--label-box:after {
   content: '';
