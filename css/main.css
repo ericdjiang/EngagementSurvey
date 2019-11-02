@@ -62,15 +62,27 @@ body{
     font-family: 'Karla', sans-serif;
 
 /*     For backgrounds https://dev.to/kedar9/css-only-multi-color-backgrounds-paj */
+/*
     background: linear-gradient(to right bottom, #232F3E 49.9%, #ffffff 50.1%);
     background: linear-gradient(120deg, #232F3E 60%, #ffffff 40%);
     background: linear-gradient(120deg, #e38b00 60%, #ffffff 40%);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+*/
 
     height: 100%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 
+}
+
+#split-background{
+    position:fixed;
+    min-height: 1500px;
+    min-width: 100%;
+    z-index: -1000;
+    background: linear-gradient(to right bottom, #e38b00 49.9%, #ffffff 50.1%);
+    background-repeat: no-repeat;
 }
 
 /* Progress bar */
@@ -85,7 +97,6 @@ body{
     top: 0;
     z-index: 1000;
     background-color: #232F3E;
-    color: white;
     text-align: center;
     border-bottom: 3px solid #FF9900;
 
@@ -110,14 +121,8 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
     margin-left: 5px;
 }
 
-.dot:first-child{
-    background-color:orange;
-}
-
-.dot:nth-child(2){
-    background-color: white;
-
-    
+.dot:first-child, .dot-active{
+    background-color: #ffb84d;
 }
 
 .progress-header{
@@ -126,6 +131,7 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
     margin-top: 4px;
     font-weight: bold;
     display: inline-block;
+    color: white;
     
     transform: scale(1, .85);
   -webkit-transform: scale(1, .85); /* Safari and Chrome */
@@ -175,10 +181,12 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
 }
 
 @media only screen and (min-width: 1000px) {
+/*
     body{
 
         background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 700px, #232F3E 700px, #232F3E 1400px);
     }
+*/
 }
 
 
@@ -355,4 +363,28 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
 }
 .hidden-box:checked + .check--label .check--label-text:after {
   width: 85%;
+}
+
+/* Buttons */
+.next-btn{
+    display:block;
+    width:60%;
+    margin: 20px auto;
+    border-radius: 30px;
+    padding: 20px;
+    text-align:center;
+    background-color: #232F3E;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.next-btn:hover{
+    cursor: pointer;
+}
+
+.next-btn:active{
+    transition: .5s;
+    background-color: darkgrey;
 }
