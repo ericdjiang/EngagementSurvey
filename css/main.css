@@ -81,7 +81,8 @@ body{
     min-height: 1500px;
     min-width: 100%;
     z-index: -1000;
-    background: linear-gradient(to right bottom, #e38b00 49.9%, #ffffff 50.1%);
+/*    background: linear-gradient(to right bottom, #e38b00 49.9%, #ffffff 50.1%);*/
+    background-image: repeating-linear-gradient(-45deg, #232F3E, #232F3E 400px, #ffffff 400px, #ffffff 800px);
     background-repeat: no-repeat;
 }
 
@@ -187,6 +188,10 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
         background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 700px, #232F3E 700px, #232F3E 1400px);
     }
 */
+    
+    #split-background{
+        background-image: repeating-linear-gradient(-45deg, #ffffff, #ffffff 700px, #232F3E 700px, #232F3E 1400px);
+    }
 }
 
 
@@ -382,9 +387,4 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
 
 .next-btn:hover{
     cursor: pointer;
-}
-
-.next-btn:active{
-    transition: .5s;
-    background-color: darkgrey;
 }
