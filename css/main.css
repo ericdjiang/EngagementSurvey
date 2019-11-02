@@ -81,7 +81,7 @@ body{
     margin: 0 30px;
     position: sticky;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 4px;
     top: 0;
     z-index: 1000;
     background-color: #232F3E;
@@ -94,23 +94,48 @@ body{
 box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
 }
 
+.dot-wrapper{
+    display:flex;
+    justify-content: center;
+}
 .dot {
-  height: .75rem;
-  width: .75rem;
+  height: .3rem;
+  width: 2rem;
   background-color: #FFffff;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0px 5%;
+  border-radius: 10%;
+    
+}
+
+.dot:not(:first-child){
+    margin-left: 5px;
+}
+
+.dot:first-child{
+    background-color:orange;
+}
+
+.dot:nth-child(2){
+    background-color: white;
+
+    
 }
 
 .progress-header{
     font-size: 1rem;
     text-transform: uppercase;
     margin-top: 4px;
+    font-weight: bold;
+    display: inline-block;
+    
+    transform: scale(1, .85);
+  -webkit-transform: scale(1, .85); /* Safari and Chrome */
+  -moz-transform: scale(1, .85); /* Firefox */
+  -ms-transform: scale(1, .85); /* IE 9+ */
+  -o-transform: scale(1, .85); /* Opera */
 }
 
-.progress-header span::first-letter{
-    font-size: 3rem;
+.progress-header::first-letter{
+/*    font-size: 1.3rem;*/
 }
 
 .q-box{
