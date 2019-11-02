@@ -64,6 +64,7 @@ body{
 /*     For backgrounds https://dev.to/kedar9/css-only-multi-color-backgrounds-paj */
     background: linear-gradient(to right bottom, #232F3E 49.9%, #ffffff 50.1%);
     background: linear-gradient(120deg, #232F3E 60%, #ffffff 40%);
+    background: linear-gradient(120deg, #e38b00 60%, #ffffff 40%);
 
     height: 100%;
     margin: 0;
@@ -74,13 +75,42 @@ body{
 
 /* Progress bar */
 .progress-wrapper{
-    background-color: white;
     height: auto;
-    width: 70%;
-    border-radius: 0 0 5px 5px;
+    width: 250px;
+    border-radius: 0 0 15px 15px;
+    margin: 0 30px;
     position: sticky;
+    box-sizing: border-box;
+    padding: 10px 20px;
     top: 0;
     z-index: 1000;
+    background-color: #232F3E;
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid #FF9900;
+
+-webkit-box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
+-moz-box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
+box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
+}
+
+.dot {
+  height: .75rem;
+  width: .75rem;
+  background-color: #FFffff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px 5%;
+}
+
+.progress-header{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.progress-header span::first-letter{
+    font-size: 3rem;
 }
 
 .q-box{
