@@ -154,9 +154,9 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
     
     background-color:white;
     border: 1px solid white;
-    -webkit-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
-    -moz-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
-    box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
+    -moz-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
+    box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
 }
 
 .q-box:nth-child(even){
@@ -374,7 +374,7 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
 .next-btn{
     display:block;
     width:60%;
-    margin: 20px auto;
+    margin: 20px auto 40px auto;
     border-radius: 30px;
     padding: 20px;
     text-align:center;
@@ -384,8 +384,14 @@ box-shadow: 10px 2px 45px -6px rgba(0,0,0,1);
     font-size: 1.5rem;
     letter-spacing: 4px;
     font-weight: bold;
+    transition: .3s;
+    
+        -webkit-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
+    -moz-box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
+    box-shadow: 10px 10px 44px -17px rgba(0,0,0,0.9);
 }
 
 .next-btn:hover{
     cursor: pointer;
+    background-color: #ffb84d;
 }
